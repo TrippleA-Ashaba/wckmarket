@@ -505,7 +505,7 @@
 								community, to help people build their wealth by teaching them how to
 								become profitable traders.
 							</p>
-							<a class="cta-btn align-self-start" href="#">Apply Now</a>
+							<a class="cta-btn align-self-start" href="#pricing">Apply Now</a>
 						</div>
 
 						<div
@@ -1649,7 +1649,13 @@
 								</ul>
 
 								<div class="text-center mt-auto">
-									<a href="#" class="buy-btn">Apply Now</a>
+									<a
+										href="#"
+										class="buy-btn"
+										data-bs-toggle="modal"
+										data-bs-target="#chart-app-modal"
+										>Apply Now</a
+									>
 								</div>
 							</div>
 						</div>
@@ -1686,7 +1692,13 @@
 								</ul>
 
 								<div class="text-center mt-auto">
-									<a href="#" class="buy-btn">Apply Now</a>
+									<a
+										href="#"
+										class="buy-btn"
+										data-bs-toggle="modal"
+										data-bs-target="#digital-app-modal"
+										>Apply Now</a
+									>
 								</div>
 							</div>
 						</div>
@@ -1723,7 +1735,13 @@
 								</ul>
 
 								<div class="text-center mt-auto">
-									<a href="#" class="buy-btn">Apply Now</a>
+									<a
+										href="#"
+										class="buy-btn"
+										data-bs-toggle="modal"
+										data-bs-target="#physical-app-modal"
+										>Apply Now</a
+									>
 								</div>
 							</div>
 						</div>
@@ -1731,6 +1749,446 @@
 					</div>
 				</div>
 			</section>
+			<!-- Chart Application Modal -->
+			<div
+				class="modal fade"
+				id="chart-app-modal"
+				tabindex="-1"
+				aria-labelledby="exampleModalLabel"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h1 class="modal-title fs-5" id="exampleModalLabel">
+								Application Form | Charts
+							</h1>
+							<button
+								type="button"
+								class="btn-close"
+								data-bs-dismiss="modal"
+								aria-label="Close"
+							></button>
+						</div>
+						<div class="modal-body text-center">
+							<form action="" name="charts">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-floating mb-3">
+											<input
+												type="text"
+												class="form-control"
+												id="fname"
+												name="fname"
+												placeholder="John"
+												required
+											/>
+											<label for="fname">First Name</label>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-floating mb-3">
+											<input
+												type="text"
+												class="form-control"
+												id="lname"
+												name="lname"
+												placeholder="Doe"
+												required
+											/>
+											<label for="lname">Last Name</label>
+										</div>
+									</div>
+									<div>
+										<div class="form-floating mb-3">
+											<input
+												type="text"
+												class="form-control"
+												id="phone"
+												name="phone"
+												placeholder="0700 111 222"
+												required
+											/>
+											<label for="phone">Mobile Phone number</label>
+										</div>
+									</div>
+									<div>
+										<div class="form-floating mb-3">
+											<input
+												type="email"
+												class="form-control"
+												id="email"
+												name="email"
+												placeholder="name@example.com"
+												required
+											/>
+											<label for="floatingInput">Email address</label>
+										</div>
+									</div>
+									<div class="form-floating mb-3">
+										<select
+											class="form-select"
+											id="experience"
+											aria-label="Floating label select example"
+											required
+										>
+											<option value="none" selected>None</option>
+											<option value="Below-6">Less than 6 months</option>
+											<option value="Above-6">More than 6 months</option>
+										</select>
+										<label for="floatingSelect">Experience on the Market</label>
+									</div>
+									<div>
+										<div class="form-floating mb-3">
+											<input
+												type="number"
+												class="form-control"
+												id="age"
+												name="age"
+												placeholder="Age"
+												required
+											/>
+											<label for="age">Age</label>
+										</div>
+									</div>
+									<div>
+										<div class="form-floating mb-3">
+											<input
+												type="text"
+												class="form-control"
+												id="job-location"
+												name="job-location"
+												placeholder="Job and Location"
+												required
+											/>
+											<label for="job-location">Job and Location</label>
+										</div>
+									</div>
+									<div>
+										<div class="form-floating mb-3">
+											<input
+												type="text"
+												class="form-control"
+												id="reason"
+												name="reason"
+												placeholder="Why should you be considered as a WCK member?"
+												required
+											/>
+											<label for="job-location"
+												>Why should you be considered as a WCK Markets
+												member?</label
+											>
+										</div>
+									</div>
+								</div>
+								<button type="submit" class="btn btn-primary form-control">
+									Apply
+								</button>
+							</form>
+						</div>
+						<!-- <div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+							Close
+						</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div> -->
+					</div>
+				</div>
+			</div>
+
+			<!-- Digital Application Modal -->
+			<div
+				class="modal fade"
+				id="digital-app-modal"
+				tabindex="-1"
+				aria-labelledby="exampleModalLabel"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h1 class="modal-title fs-5" id="exampleModalLabel">
+								Application Form | Digital Course
+							</h1>
+							<button
+								type="button"
+								class="btn-close"
+								data-bs-dismiss="modal"
+								aria-label="Close"
+							></button>
+						</div>
+						<div class="modal-body text-center">
+							<form action="" name="digital-course">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-floating mb-3">
+											<input
+												type="text"
+												class="form-control"
+												id="fname"
+												name="fname"
+												placeholder="John"
+												required
+											/>
+											<label for="fname">First Name</label>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-floating mb-3">
+											<input
+												type="text"
+												class="form-control"
+												id="lname"
+												name="lname"
+												placeholder="Doe"
+												required
+											/>
+											<label for="lname">Last Name</label>
+										</div>
+									</div>
+									<div>
+										<div class="form-floating mb-3">
+											<input
+												type="text"
+												class="form-control"
+												id="phone"
+												name="phone"
+												placeholder="0700 111 222"
+												required
+											/>
+											<label for="phone">Mobile Phone number</label>
+										</div>
+									</div>
+									<div>
+										<div class="form-floating mb-3">
+											<input
+												type="email"
+												class="form-control"
+												id="email"
+												name="email"
+												placeholder="name@example.com"
+												required
+											/>
+											<label for="floatingInput">Email address</label>
+										</div>
+									</div>
+									<div class="form-floating mb-3">
+										<select
+											class="form-select"
+											id="experience"
+											aria-label="Floating label select example"
+											required
+										>
+											<option value="none" selected>None</option>
+											<option value="Below-6">Less than 6 months</option>
+											<option value="Above-6">More than 6 months</option>
+										</select>
+										<label for="floatingSelect">Experience on the Market</label>
+									</div>
+									<div>
+										<div class="form-floating mb-3">
+											<input
+												type="number"
+												class="form-control"
+												id="age"
+												name="age"
+												placeholder="Age"
+												required
+											/>
+											<label for="age">Age</label>
+										</div>
+									</div>
+									<div>
+										<div class="form-floating mb-3">
+											<input
+												type="text"
+												class="form-control"
+												id="job-location"
+												name="job-location"
+												placeholder="Job and Location"
+												required
+											/>
+											<label for="job-location">Job and Location</label>
+										</div>
+									</div>
+									<div>
+										<div class="form-floating mb-3">
+											<input
+												type="text"
+												class="form-control"
+												id="reason"
+												name="reason"
+												placeholder="Why should you be considered as a WCK member?"
+												required
+											/>
+											<label for="job-location"
+												>Why should you be considered as a WCK Markets
+												member?</label
+											>
+										</div>
+									</div>
+								</div>
+								<button type="submit" class="btn btn-primary form-control">
+									Apply
+								</button>
+							</form>
+						</div>
+						<!-- <div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+							Close
+						</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div> -->
+					</div>
+				</div>
+			</div>
+
+			<!-- Physical Application Modal -->
+			<div
+				class="modal fade"
+				id="physical-app-modal"
+				tabindex="-1"
+				aria-labelledby="exampleModalLabel"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h1 class="modal-title fs-5" id="exampleModalLabel">
+								Application Form | Physical Course
+							</h1>
+							<button
+								type="button"
+								class="btn-close"
+								data-bs-dismiss="modal"
+								aria-label="Close"
+							></button>
+						</div>
+						<div class="modal-body text-center">
+							<form action="" name="physical-course">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-floating mb-3">
+											<input
+												type="text"
+												class="form-control"
+												id="fname"
+												name="fname"
+												placeholder="John"
+												required
+											/>
+											<label for="fname">First Name</label>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-floating mb-3">
+											<input
+												type="text"
+												class="form-control"
+												id="lname"
+												name="lname"
+												placeholder="Doe"
+												required
+											/>
+											<label for="lname">Last Name</label>
+										</div>
+									</div>
+									<div>
+										<div class="form-floating mb-3">
+											<input
+												type="text"
+												class="form-control"
+												id="phone"
+												name="phone"
+												placeholder="0700 111 222"
+												required
+											/>
+											<label for="phone">Mobile Phone number</label>
+										</div>
+									</div>
+									<div>
+										<div class="form-floating mb-3">
+											<input
+												type="email"
+												class="form-control"
+												id="email"
+												name="email"
+												placeholder="name@example.com"
+												required
+											/>
+											<label for="floatingInput">Email address</label>
+										</div>
+									</div>
+									<div class="form-floating mb-3">
+										<select
+											class="form-select"
+											id="experience"
+											aria-label="Floating label select example"
+											required
+										>
+											<option value="none" selected>None</option>
+											<option value="Below-6">Less than 6 months</option>
+											<option value="Above-6">More than 6 months</option>
+										</select>
+										<label for="floatingSelect">Experience on the Market</label>
+									</div>
+									<div>
+										<div class="form-floating mb-3">
+											<input
+												type="number"
+												class="form-control"
+												id="age"
+												name="age"
+												placeholder="Age"
+												required
+											/>
+											<label for="age">Age</label>
+										</div>
+									</div>
+									<div>
+										<div class="form-floating mb-3">
+											<input
+												type="text"
+												class="form-control"
+												id="job-location"
+												name="job-location"
+												placeholder="Job and Location"
+												required
+											/>
+											<label for="job-location">Job and Location</label>
+										</div>
+									</div>
+									<div>
+										<div class="form-floating mb-3">
+											<input
+												type="text"
+												class="form-control"
+												id="reason"
+												name="reason"
+												placeholder="Why should you be considered as a WCK member?"
+												required
+											/>
+											<label for="job-location"
+												>Why should you be considered as a WCK Markets
+												member?</label
+											>
+										</div>
+									</div>
+								</div>
+								<button type="submit" class="btn btn-primary form-control">
+									Apply
+								</button>
+							</form>
+						</div>
+						<!-- <div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+							Close
+						</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div> -->
+					</div>
+				</div>
+			</div>
 			<!-- End Pricing Section -->
 
 			<!-- ======= F.A.Q Section ======= -->
