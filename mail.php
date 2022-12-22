@@ -1,11 +1,12 @@
 <?php
 // Uncomment next line if you're not using a dependency loader (such as Composer)
 // require_once 'vendor/sendgrid/sendgrid/sendgrid-php.php';
+require 'config.php';
 require 'vendor/autoload.php';
 use SendGrid\Mail\Mail;
 
 $email = new Mail();
-$companyEmail = "abahoallans@gmail.com";
+$companyEmail = "applications@wckmarkets.com";
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $phone = $_POST['phone'];
@@ -35,9 +36,10 @@ $email->addContent(
             $name
     </p>"
 );
-$sendgrid = new \SendGrid('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');
+$sendgrid = new \SendGrid($apiKey);
 if($sendgrid->send($email)){
-    echo "Thank you for applying. We'll get back to you shortly";
+    header("Location: index.html");
+    die();
 }
 // try {
 //     $response = $sendgrid->send($email);
@@ -45,4 +47,3 @@ if($sendgrid->send($email)){
 // } catch (Exception $e) {
 //     echo 'Caught exception: '. $e->getMessage() ."\n";
 // }
-?>
