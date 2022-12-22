@@ -11,7 +11,7 @@ $lname = $_POST['lname'];
 $phone = $_POST['phone'];
 $experience = $_POST['experience'];
 $location = $_POST['location'];
-$age = $_POST['age'];   
+$dob = $_POST['dob'];   
 $course = $_POST['course'];
 $reason = $_POST['reason'];
 $emailAddress = $_POST['email'];
@@ -27,7 +27,7 @@ $email->addContent(
             Email: $emailAddress, <br>
             Phone Number: $phone, <br>
             Location: $location, <br>
-            Age: $age, <br>
+            Date Of Birth: $dob, <br>
             Course: $course, <br>
             Experience: $experience, <br>
             Reason: $reason.<br>
