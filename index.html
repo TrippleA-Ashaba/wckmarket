@@ -85,7 +85,7 @@
 							<a class="nav-link scrollto" href="index.html#portfolio">Portfolio</a>
 						</li>
 						<li><a class="nav-link scrollto" href="index.html#team">Team</a></li>
-						<li><a href="blog.html">Blog</a></li>
+						<li><a href="#recent-blog-posts">Blog</a></li>
 						<!-- <li class="dropdown megamenu">
 							<a href="#"
 								><span>Mega Menu</span>
@@ -164,7 +164,7 @@
 				<div class="d-flex">
 					<a href="#about" class="btn-get-started scrollto">Get Started</a>
 					<a
-						href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+						href="https://www.youtube.com/watch?v=OTm1-17XWPU"
 						class="glightbox btn-watch-video d-flex align-items-center"
 						><i class="bi bi-play-circle"></i><span>Watch Video</span></a
 					>
@@ -512,7 +512,7 @@
 							class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center"
 						>
 							<div class="img">
-								<img src="assets/img/cta.jpg" alt="" class="img-fluid" />
+								<img src="assets/img/About us -1.png" alt="" class="img-fluid" />
 							</div>
 						</div>
 					</div>
@@ -526,7 +526,7 @@
 					<div class="row g-0">
 						<div class="col-lg-6 video-play position-relative">
 							<a
-								href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+								href="https://www.youtube.com/watch?v=OTm1-17XWPU"
 								class="glightbox play-btn"
 							></a>
 						</div>
@@ -1135,7 +1135,7 @@
 						</div>
 						<div class="modal-body text-center">
 							<h5 class="fw-bold">Technical analysis</h5>
-							<p>Discover FXCartel's strategies to master "sniper entries"</p>
+							<p>Discover WCKMarkets's strategies to master "sniper entries"</p>
 							<h5 class="fw-bold">Fundamental analysis</h5>
 							<p>
 								Learn how to identify & profit from the data that drive the market.
@@ -1261,11 +1261,11 @@
 								Dependent on market conditions and sent during European & American
 								sessions
 							</p>
-							<h5 class="fw-bold">Bonus GROUP chat</h5>
+							<!-- <h5 class="fw-bold">Bonus GROUP chat</h5>
 							<p>
 								Bonus "WCK Marketsl chat" to interact with other members *Different
 								from "50cal chat"*
-							</p>
+							</p> -->
 						</div>
 						<!-- <div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
@@ -1653,7 +1653,8 @@
 										href="#"
 										class="buy-btn"
 										data-bs-toggle="modal"
-										data-bs-target="#chart-app-modal"
+										data-bs-target="#application-modal"
+										onclick="getElementById('modal-header').innerHTML = 'Chart Analysis Course - Application Form'"
 										>Apply Now</a
 									>
 								</div>
@@ -1679,6 +1680,10 @@
 									</li>
 									<li>
 										<i class="bi bi-dot"></i>
+										<span> Market Physiology </span>
+									</li>
+									<li>
+										<i class="bi bi-dot"></i>
 										<span> Risk management </span>
 									</li>
 									<li>
@@ -1696,7 +1701,8 @@
 										href="#"
 										class="buy-btn"
 										data-bs-toggle="modal"
-										data-bs-target="#digital-app-modal"
+										data-bs-target="#application-modal"
+										onclick="getElementById('modal-header').innerHTML = 'Digital Course - Application Form'"
 										>Apply Now</a
 									>
 								</div>
@@ -1722,6 +1728,10 @@
 									</li>
 									<li>
 										<i class="bi bi-dot"></i>
+										<span> Market Physiology </span>
+									</li>
+									<li>
+										<i class="bi bi-dot"></i>
 										<span> Risk management </span>
 									</li>
 									<li>
@@ -1739,7 +1749,8 @@
 										href="#"
 										class="buy-btn"
 										data-bs-toggle="modal"
-										data-bs-target="#physical-app-modal"
+										data-bs-target="#application-modal"
+										onclick="getCourse('Physical Course - Application Form')"
 										>Apply Now</a
 									>
 								</div>
@@ -1752,7 +1763,7 @@
 			<!-- Chart Application Modal -->
 			<div
 				class="modal fade"
-				id="chart-app-modal"
+				id="application-modal"
 				tabindex="-1"
 				aria-labelledby="exampleModalLabel"
 				aria-hidden="true"
@@ -1760,9 +1771,7 @@
 				<div class="modal-dialog modal-dialog-centered modal-lg">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h1 class="modal-title fs-5" id="exampleModalLabel">
-								Application Form | Charts
-							</h1>
+							<h1 class="modal-title fs-5" id="modal-header"></h1>
 							<button
 								type="button"
 								class="btn-close"
@@ -1771,7 +1780,8 @@
 							></button>
 						</div>
 						<div class="modal-body text-center">
-							<form action="" name="charts">
+							<form action="mail.php" name="charts" method="post">
+								<input type="hidden" name="course" value="" id="course-name" />
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-floating mb-3">
@@ -1829,6 +1839,7 @@
 										<select
 											class="form-select"
 											id="experience"
+											name="experience"
 											aria-label="Floating label select example"
 											required
 										>
@@ -1841,162 +1852,28 @@
 									<div>
 										<div class="form-floating mb-3">
 											<input
-												type="number"
+												type="date"
 												class="form-control"
-												id="age"
-												name="age"
-												placeholder="Age"
+												id="dob"
+												name="dob"
+												placeholder="Date of Birth"
 												required
 											/>
-											<label for="age">Age</label>
-										</div>
-									</div>
-									<div>
-										<div class="form-floating mb-3">
-											<input
-												type="text"
-												class="form-control"
-												id="job-location"
-												name="job-location"
-												placeholder="Job and Location"
-												required
-											/>
-											<label for="job-location">Job and Location</label>
-										</div>
-									</div>
-									<div>
-										<div class="form-floating mb-3">
-											<input
-												type="text"
-												class="form-control"
-												id="reason"
-												name="reason"
-												placeholder="Why should you be considered as a WCK member?"
-												required
-											/>
-											<label for="job-location"
-												>Why should you be considered as a WCK Markets
-												member?</label
-											>
-										</div>
-									</div>
-								</div>
-								<button type="submit" class="btn btn-primary form-control">
-									Apply
-								</button>
-							</form>
-						</div>
-						<!-- <div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-							Close
-						</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
-					</div> -->
-					</div>
-				</div>
-			</div>
-
-			<!-- Digital Application Modal -->
-			<div
-				class="modal fade"
-				id="digital-app-modal"
-				tabindex="-1"
-				aria-labelledby="exampleModalLabel"
-				aria-hidden="true"
-			>
-				<div class="modal-dialog modal-dialog-centered modal-lg">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h1 class="modal-title fs-5" id="exampleModalLabel">
-								Application Form | Digital Course
-							</h1>
-							<button
-								type="button"
-								class="btn-close"
-								data-bs-dismiss="modal"
-								aria-label="Close"
-							></button>
-						</div>
-						<div class="modal-body text-center">
-							<form action="" name="digital-course">
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-floating mb-3">
-											<input
-												type="text"
-												class="form-control"
-												id="fname"
-												name="fname"
-												placeholder="John"
-												required
-											/>
-											<label for="fname">First Name</label>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-floating mb-3">
-											<input
-												type="text"
-												class="form-control"
-												id="lname"
-												name="lname"
-												placeholder="Doe"
-												required
-											/>
-											<label for="lname">Last Name</label>
-										</div>
-									</div>
-									<div>
-										<div class="form-floating mb-3">
-											<input
-												type="text"
-												class="form-control"
-												id="phone"
-												name="phone"
-												placeholder="0700 111 222"
-												required
-											/>
-											<label for="phone">Mobile Phone number</label>
-										</div>
-									</div>
-									<div>
-										<div class="form-floating mb-3">
-											<input
-												type="email"
-												class="form-control"
-												id="email"
-												name="email"
-												placeholder="name@example.com"
-												required
-											/>
-											<label for="floatingInput">Email address</label>
+											<label for="dob">Date of Birth</label>
 										</div>
 									</div>
 									<div class="form-floating mb-3">
 										<select
 											class="form-select"
-											id="experience"
+											id="gender"
+											name="gender"
 											aria-label="Floating label select example"
 											required
 										>
-											<option value="none" selected>None</option>
-											<option value="Below-6">Less than 6 months</option>
-											<option value="Above-6">More than 6 months</option>
+											<option value="Male" selected>Male</option>
+											<option value="Female">Female</option>
 										</select>
-										<label for="floatingSelect">Experience on the Market</label>
-									</div>
-									<div>
-										<div class="form-floating mb-3">
-											<input
-												type="number"
-												class="form-control"
-												id="age"
-												name="age"
-												placeholder="Age"
-												required
-											/>
-											<label for="age">Age</label>
-										</div>
+										<label for="floatingSelect">Gender</label>
 									</div>
 									<div>
 										<div class="form-floating mb-3">
@@ -2004,7 +1881,7 @@
 												type="text"
 												class="form-control"
 												id="job-location"
-												name="job-location"
+												name="location"
 												placeholder="Job and Location"
 												required
 											/>
@@ -2013,14 +1890,15 @@
 									</div>
 									<div>
 										<div class="form-floating mb-3">
-											<input
+											<textarea
 												type="text"
 												class="form-control"
 												id="reason"
 												name="reason"
 												placeholder="Why should you be considered as a WCK member?"
+												rows="2"
 												required
-											/>
+											></textarea>
 											<label for="job-location"
 												>Why should you be considered as a WCK Markets
 												member?</label
@@ -2029,154 +1907,7 @@
 									</div>
 								</div>
 								<button type="submit" class="btn btn-primary form-control">
-									Apply
-								</button>
-							</form>
-						</div>
-						<!-- <div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-							Close
-						</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
-					</div> -->
-					</div>
-				</div>
-			</div>
-
-			<!-- Physical Application Modal -->
-			<div
-				class="modal fade"
-				id="physical-app-modal"
-				tabindex="-1"
-				aria-labelledby="exampleModalLabel"
-				aria-hidden="true"
-			>
-				<div class="modal-dialog modal-dialog-centered modal-lg">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h1 class="modal-title fs-5" id="exampleModalLabel">
-								Application Form | Physical Course
-							</h1>
-							<button
-								type="button"
-								class="btn-close"
-								data-bs-dismiss="modal"
-								aria-label="Close"
-							></button>
-						</div>
-						<div class="modal-body text-center">
-							<form action="" name="physical-course">
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-floating mb-3">
-											<input
-												type="text"
-												class="form-control"
-												id="fname"
-												name="fname"
-												placeholder="John"
-												required
-											/>
-											<label for="fname">First Name</label>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-floating mb-3">
-											<input
-												type="text"
-												class="form-control"
-												id="lname"
-												name="lname"
-												placeholder="Doe"
-												required
-											/>
-											<label for="lname">Last Name</label>
-										</div>
-									</div>
-									<div>
-										<div class="form-floating mb-3">
-											<input
-												type="text"
-												class="form-control"
-												id="phone"
-												name="phone"
-												placeholder="0700 111 222"
-												required
-											/>
-											<label for="phone">Mobile Phone number</label>
-										</div>
-									</div>
-									<div>
-										<div class="form-floating mb-3">
-											<input
-												type="email"
-												class="form-control"
-												id="email"
-												name="email"
-												placeholder="name@example.com"
-												required
-											/>
-											<label for="floatingInput">Email address</label>
-										</div>
-									</div>
-									<div class="form-floating mb-3">
-										<select
-											class="form-select"
-											id="experience"
-											aria-label="Floating label select example"
-											required
-										>
-											<option value="none" selected>None</option>
-											<option value="Below-6">Less than 6 months</option>
-											<option value="Above-6">More than 6 months</option>
-										</select>
-										<label for="floatingSelect">Experience on the Market</label>
-									</div>
-									<div>
-										<div class="form-floating mb-3">
-											<input
-												type="number"
-												class="form-control"
-												id="age"
-												name="age"
-												placeholder="Age"
-												required
-											/>
-											<label for="age">Age</label>
-										</div>
-									</div>
-									<div>
-										<div class="form-floating mb-3">
-											<input
-												type="text"
-												class="form-control"
-												id="job-location"
-												name="job-location"
-												placeholder="Job and Location"
-												required
-											/>
-											<label for="job-location">Job and Location</label>
-										</div>
-									</div>
-									<div>
-										<div class="form-floating mb-3">
-											<input
-												type="text"
-												class="form-control"
-												id="reason"
-												name="reason"
-												placeholder="Why should you be considered as a WCK member?"
-												required
-											/>
-											<label for="job-location"
-												>Why should you be considered as a WCK Markets
-												member?</label
-											>
-										</div>
-									</div>
-								</div>
-								<button type="submit" class="btn btn-primary form-control">
-									Apply
+									Submit Application
 								</button>
 							</form>
 						</div>
@@ -2254,7 +1985,7 @@
 									>
 										<div class="accordion-body">
 											Yes, as long as you provide us with 48 hours’ notice via
-											email at info@fxcartel.co.uk before your payment date is
+											email at info@wckmarkets.com before your payment date is
 											due.
 										</div>
 									</div>
@@ -2288,7 +2019,7 @@
 								</div>
 								<!-- # Faq item-->
 
-								<div class="accordion-item" data-aos="fade-up" data-aos-delay="500">
+								<!-- <div class="accordion-item" data-aos="fade-up" data-aos-delay="500">
 									<h3 class="accordion-header">
 										<button
 											class="accordion-button collapsed"
@@ -2312,7 +2043,7 @@
 											the basics of the Forex market.
 										</div>
 									</div>
-								</div>
+								</div> -->
 								<!-- # Faq item-->
 
 								<div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
@@ -2360,9 +2091,10 @@
 					<div class="section-header">
 						<h2>Portfolio</h2>
 						<p>
-							Non hic nulla eum consequatur maxime ut vero memo vero totam officiis
-							pariatur eos dolorum sed fug dolorem est possimus esse quae repudiandae.
-							Dolorem id enim officiis sunt deserunt esse soluta consequatur quaerat
+							An organisation's ability to learn, and translate that learning into
+							action rapidly, is the ultimate competitive advantage. A vision is not
+							just a picture of what could be, it is an appeal to our better selves, a
+							call to become something more.
 						</p>
 					</div>
 				</div>
@@ -2377,9 +2109,9 @@
 						<ul class="portfolio-flters">
 							<li data-filter="*" class="filter-active">All</li>
 							<li data-filter=".filter-app">App</li>
-							<li data-filter=".filter-product">Product</li>
-							<li data-filter=".filter-branding">Branding</li>
-							<li data-filter=".filter-books">Books</li>
+							<li data-filter=".filter-product">Charts</li>
+							<li data-filter=".filter-branding">Trading Area</li>
+							<li data-filter=".filter-books">Signals</li>
 						</ul>
 						<!-- End Portfolio Filters -->
 
@@ -2696,15 +2428,14 @@
 					<div class="section-header">
 						<h2>Our Team</h2>
 						<p>
-							Architecto nobis eos vel nam quidem vitae temporibus voluptates qui hic
-							deserunt iusto omnis nam voluptas asperiores sequi tenetur dolores
-							incidunt enim voluptatem magnam cumque fuga.
+							Together, ordinary people can achieve extraordinary results. Leadership
+							is the secret that makes common people achieve uncommon results.
 						</p>
 					</div>
 
 					<div class="row gy-5">
 						<div
-							class="col-xl-4 col-md-6 d-flex"
+							class="col-xl-6 col-md-6 d-flex"
 							data-aos="zoom-in"
 							data-aos-delay="200"
 						>
@@ -2731,7 +2462,7 @@
 						<!-- End Team Member -->
 
 						<div
-							class="col-xl-4 col-md-6 d-flex"
+							class="col-xl-6 col-md-6 d-flex"
 							data-aos="zoom-in"
 							data-aos-delay="400"
 						>
@@ -2757,7 +2488,7 @@
 						</div>
 						<!-- End Team Member -->
 
-						<div
+						<!-- <div
 							class="col-xl-4 col-md-6 d-flex"
 							data-aos="zoom-in"
 							data-aos-delay="600"
@@ -2781,7 +2512,7 @@
 									<span>CTO</span>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<!-- End Team Member -->
 					</div>
 				</div>
@@ -2859,7 +2590,7 @@
 							<div class="post-box">
 								<div class="post-img">
 									<img
-										src="assets/img/blog/blog-3.jpg"
+										src="assets/img/blog1/blog - The Basics about Cryptocurrency.---.jfif"
 										class="img-fluid"
 										alt=""
 									/>
@@ -2868,13 +2599,19 @@
 									<span class="post-date">Tue, July 27</span>
 									<span class="post-author"> / Lisa Hunter</span>
 								</div>
-								<h3 class="post-title">Quia assumenda est et veritatis aut quae</h3>
+								<h3 class="post-title">How does cryptocurrency work?</h3>
 								<p>
-									Quia nam eaque omnis explicabo similique eum quaerat similique
-									laboriosam. Quis omnis repellat sed quae consectetur magnam
-									veritatis dicta nihil...
+									Cryptocurrencies run on a distributed public ledger called
+									blockchain, a record of all transactions updated and held by
+									currency holders
 								</p>
-								<a href="blog-details.html" class="readmore stretched-link"
+								<p>
+									Units of cryptocurrency are created through a process called
+									mining, which involves using computer power to solve complicated
+									mathematical problems that generate coins. Users can also buy
+									the currencies from brokers, then....
+								</p>
+								<a href="blog-details3.html" class="readmore stretched-link"
 									><span>Read More</span><i class="bi bi-arrow-right"></i
 								></a>
 							</div>
@@ -2889,28 +2626,47 @@
 				<div class="container">
 					<div class="section-header">
 						<h2>Contact Us</h2>
-						<p>
-							Ea vitae aspernatur deserunt voluptatem impedit deserunt magnam
-							occaecati dssumenda quas ut ad dolores adipisci aliquam.
-						</p>
+						<p>Where to find us</p>
 					</div>
 				</div>
 
+<<<<<<< HEAD
+=======
+				<div class="map">
+					<!-- <iframe
+						src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+						frameborder="0"
+						allowfullscreen
+					></iframe> -->
+
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4794.213213009867!2d32.632692058015124!3d0.3673551834116364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177db9f40f689413%3A0xae7ffd566351f185!2sMetroplex%20Shopping%20Centre!5e0!3m2!1sen!2sug!4v1671055642596!5m2!1sen!2sug"
+						width="600"
+						height="450"
+						style="border: 0"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"
+					></iframe>
+				</div>
+				<!-- End Google Maps -->
+
+>>>>>>> 7a80854ccc0c97157ffb811c4114ebd5d7d3af44
 				<div class="container">
 					<div class="row gy-5 gx-lg-5">
 						<div class="col-lg-4">
 							<div class="info">
 								<h3>Get in touch</h3>
-								<p>
-									Et id eius voluptates atque nihil voluptatem enim in tempore
-									minima sit ad mollitia commodi minus.
-								</p>
+								<p>Reach Us at the following Addresses:</p>
 
 								<div class="info-item d-flex">
 									<i class="bi bi-geo-alt flex-shrink-0"></i>
 									<div>
 										<h4>Location:</h4>
-										<p>A108 Adam Street, New York, NY 535022</p>
+										<p>
+											Metroplex Shopping Centre, Northern Bypass Hwy, Kampala,
+											Uganda.
+										</p>
 									</div>
 								</div>
 								<!-- End Info Item -->
@@ -2919,7 +2675,7 @@
 									<i class="bi bi-envelope flex-shrink-0"></i>
 									<div>
 										<h4>Email:</h4>
-										<p>info@example.com</p>
+										<p>info@wckmarkets.com</p>
 									</div>
 								</div>
 								<!-- End Info Item -->
@@ -2928,7 +2684,7 @@
 									<i class="bi bi-phone flex-shrink-0"></i>
 									<div>
 										<h4>Call:</h4>
-										<p>+1 5589 55488 55</p>
+										<p>+256 770 355 497 / +256 700 808 321</p>
 									</div>
 								</div>
 								<!-- End Info Item -->
@@ -3026,10 +2782,10 @@
 							<div class="footer-info">
 								<h3>wckmarkets</h3>
 								<p>
-									A108 Adam Street <br />
-									NY 535022, USA<br /><br />
-									<strong>Phone:</strong> +1 5589 55488 55<br />
-									<strong>Email:</strong> info@example.com<br />
+									Metroplex Shopping Centre<br />
+									Northern Bypass Hwy, Kampala, Uganda.<br /><br />
+									<strong>Phone:</strong> +256 770 355 497 / +256 700 808 321<br />
+									<strong>Email:</strong> info@wckmarkets.com<br />
 								</p>
 							</div>
 						</div>
@@ -3037,21 +2793,26 @@
 						<div class="col-lg-2 col-md-6 footer-links">
 							<h4>Useful Links</h4>
 							<ul>
-								<li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
 								<li>
-									<i class="bi bi-chevron-right"></i> <a href="#">About us</a>
+									<i class="bi bi-chevron-right"></i>
+									<a href="index.html">Home</a>
 								</li>
 								<li>
-									<i class="bi bi-chevron-right"></i> <a href="#">Services</a>
+									<i class="bi bi-chevron-right"></i>
+									<a href="index.html#about">About us</a>
 								</li>
 								<li>
+									<i class="bi bi-chevron-right"></i>
+									<a href="index.html#services">Services</a>
+								</li>
+								<!-- <li>
 									<i class="bi bi-chevron-right"></i>
 									<a href="#">Terms of service</a>
 								</li>
 								<li>
 									<i class="bi bi-chevron-right"></i>
 									<a href="#">Privacy policy</a>
-								</li>
+								</li> -->
 							</ul>
 						</div>
 
@@ -3059,9 +2820,10 @@
 							<h4>Our Services</h4>
 							<ul>
 								<li>
-									<i class="bi bi-chevron-right"></i> <a href="#">Web Design</a>
+									<i class="bi bi-chevron-right"></i>
+									<a href="index.html#services">See Our Services</a>
 								</li>
-								<li>
+								<!-- <li>
 									<i class="bi bi-chevron-right"></i>
 									<a href="#">Web Development</a>
 								</li>
@@ -3075,12 +2837,12 @@
 								<li>
 									<i class="bi bi-chevron-right"></i>
 									<a href="#">Graphic Design</a>
-								</li>
+								</li> -->
 							</ul>
 						</div>
 
 						<div class="col-lg-4 col-md-6 footer-newsletter">
-							<h4>Our Newsletter</h4>
+							<!-- <h4>Our Newsletter</h4>
 							<p>
 								Tamen quem nulla quae legam multos aute sint culpa legam noster
 								magna
@@ -3090,7 +2852,7 @@
 									type="submit"
 									value="Subscribe"
 								/>
-							</form>
+							</form> -->
 						</div>
 					</div>
 				</div>
@@ -3102,7 +2864,7 @@
 				>
 					<div class="d-flex flex-column align-items-center align-items-lg-start">
 						<div class="copyright">
-							&copy; Copyright <strong><span>HeroBiz</span></strong
+							&copy; Copyright <strong><span>WCKMarkets</span></strong
 							>. All Rights Reserved
 						</div>
 						<div class="credits">
@@ -3142,5 +2904,11 @@
 
 		<!-- Template Main JS File -->
 		<script src="assets/js/main.js"></script>
+		<script>
+			function getCourse(courseName) {
+				document.getElementById("modal-header").innerHTML = courseName;
+				document.getElementById("course-name").value = courseName;
+			}
+		</script>
 	</body>
 </html>

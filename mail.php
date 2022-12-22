@@ -6,22 +6,33 @@ use SendGrid\Mail\Mail;
 
 $email = new Mail();
 $companyEmail = "abahoallans@gmail.com";
-$name = $_POST['name'];
-$message = $_POST['message'];
+$fname = $_POST['fname'];
+$lname = $_POST['lname'];
+$phone = $_POST['phone'];
+$experience = $_POST['experience'];
+$location = $_POST['location'];
+$age = $_POST['age'];   
+$course = $_POST['course'];
+$reason = $_POST['reason'];
 $emailAddress = $_POST['email'];
-// $package = $_POST['package'];             Package: $package,<br>
 $subject = "New Application";
+$name = $fname.' '.$lname;
 $email->setFrom($emailAddress, "WCK Markets Member");
 $email->setSubject($subject);
 $email->addTo($companyEmail, "WCK Markets Admin");
 $email->addContent(
     "text/html", "<p>Hello Admin,<br>
             Please find my details below,<br>
-            Name: $name,<br>
+            Full Name: $name,<br>
             Email: $emailAddress, <br>
-            Message: $message.<br>
-            kr,
-            $name.
+            Phone Number: $phone, <br>
+            Location: $location, <br>
+            Age: $age, <br>
+            Course: $course, <br>
+            Experience: $experience, <br>
+            Reason: $reason.<br>
+            kr,<br>
+            $name
     </p>"
 );
 $sendgrid = new \SendGrid('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');
