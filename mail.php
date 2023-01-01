@@ -6,7 +6,6 @@ require 'vendor/autoload.php';
 use SendGrid\Mail\Mail;
 
 $email = new Mail();
-$companyEmail = "applications@wckmarkets.com";
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $phone = $_POST['phone'];
@@ -38,7 +37,7 @@ $email->addContent(
 );
 $sendgrid = new \SendGrid($apiKey);
 if($sendgrid->send($email)){
-    header("Location: index.html");
+    header("Location: index.php?message=success");
     die();
 }
 // try {

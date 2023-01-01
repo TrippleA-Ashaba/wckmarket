@@ -52,7 +52,7 @@
 		<header id="header" class="header fixed-top" data-scrollto-offset="0">
 			<div class="container-fluid d-flex align-items-center justify-content-between">
 				<a
-					href="index.html"
+					href="index.php"
 					class="logo d-flex align-items-center scrollto me-auto me-lg-0"
 				>
 					<!-- Uncomment the line below if you also wish to use an image logo -->
@@ -68,23 +68,23 @@
 								<i class="bi bi-chevron-down dropdown-indicator"></i
 							></a>
 							<ul>
-								<li><a href="index.html" class="active">Home 1 - index.html</a></li>
+								<li><a href="index.php" class="active">Home 1 - index.php</a></li>
 								<li><a href="index-2.html">Home 2 - index-2.html</a></li>
 								<li><a href="index-3.html">Home 3 - index-3.html</a></li>
 								<li><a href="index-4.html">Home 4 - index-4.html</a></li>
 							</ul>
 						</li> -->
-						<li><a class="nav-link scrollto" href="index.html#">Home</a></li>
+						<li><a class="nav-link scrollto" href="index.php#">Home</a></li>
 						<li></li>
 
-						<li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+						<li><a class="nav-link scrollto" href="index.php#about">About</a></li>
 						<li>
-							<a class="nav-link scrollto" href="index.html#services">Services</a>
+							<a class="nav-link scrollto" href="index.php#services">Services</a>
 						</li>
 						<li>
-							<a class="nav-link scrollto" href="index.html#portfolio">Portfolio</a>
+							<a class="nav-link scrollto" href="index.php#portfolio">Portfolio</a>
 						</li>
-						<li><a class="nav-link scrollto" href="index.html#team">Team</a></li>
+						<li><a class="nav-link scrollto" href="index.php#team">Team</a></li>
 						<li><a href="#recent-blog-posts">Blog</a></li>
 						<!-- <li class="dropdown megamenu">
 							<a href="#"
@@ -139,14 +139,19 @@
 								<li><a href="#">Drop Down 4</a></li>
 							</ul>
 						</li> -->
-						<li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+						<li><a class="nav-link scrollto" href="index.php#contact">Contact</a></li>
 					</ul>
 					<i class="bi bi-list mobile-nav-toggle d-none"></i>
 				</nav>
 				<!-- .navbar -->
 
-				<a class="btn-getstarted scrollto" href="index.html#services">Get Started</a>
+				<a class="btn-getstarted scrollto" href="index.php#services">Get Started</a>
 			</div>
+			<?php if(!empty($_GET['message'])): ?>
+			<div class="alert alert-success" role="alert">
+				Your application was submitted successfully, we'll get back to you shortly
+			  </div>
+			<?php endif; ?>
 		</header>
 		<!-- End Header -->
 
@@ -2792,15 +2797,15 @@
 							<ul>
 								<li>
 									<i class="bi bi-chevron-right"></i>
-									<a href="index.html">Home</a>
+									<a href="index.php">Home</a>
 								</li>
 								<li>
 									<i class="bi bi-chevron-right"></i>
-									<a href="index.html#about">About us</a>
+									<a href="index.php#about">About us</a>
 								</li>
 								<li>
 									<i class="bi bi-chevron-right"></i>
-									<a href="index.html#services">Services</a>
+									<a href="index.php#services">Services</a>
 								</li>
 								<!-- <li>
 									<i class="bi bi-chevron-right"></i>
@@ -2818,7 +2823,7 @@
 							<ul>
 								<li>
 									<i class="bi bi-chevron-right"></i>
-									<a href="index.html#services">See Our Services</a>
+									<a href="index.php#services">See Our Services</a>
 								</li>
 								<!-- <li>
 									<i class="bi bi-chevron-right"></i>
