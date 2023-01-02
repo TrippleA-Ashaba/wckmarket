@@ -65,7 +65,7 @@
 				data-aos="zoom-out"
 			>
 				<img
-					src="assets/img/hero-carousel/2.svg"
+					src="assets/img/hero-carousel/5.svg"
 					class="img-fluid animated"
 				/>
 				<h2>Welcome to <span>WCK Markets</span></h2>
