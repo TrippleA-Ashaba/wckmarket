@@ -1563,7 +1563,7 @@
 										class="buy-btn"
 										data-bs-toggle="modal"
 										data-bs-target="#application-modal"
-										onclick="getElementById('modal-header').innerHTML = 'Chart Analysis Course - Application Form'"
+										onclick="getCourse('Chart Analysis Course')"
 										>Apply Now</a
 									>
 								</div>
@@ -1611,7 +1611,7 @@
 										class="buy-btn"
 										data-bs-toggle="modal"
 										data-bs-target="#application-modal"
-										onclick="getElementById('modal-header').innerHTML = 'Digital Course - Application Form'"
+										onclick="getCourse('Digital Course')"
 										>Apply Now</a
 									>
 								</div>
@@ -1659,7 +1659,7 @@
 										class="buy-btn"
 										data-bs-toggle="modal"
 										data-bs-target="#application-modal"
-										onclick="getCourse('Physical Course - Application Form')"
+										onclick="getCourse('Physical Course')"
 										>Apply Now</a
 									>
 								</div>
@@ -1718,7 +1718,7 @@
 											<label for="lname">Last Name</label>
 										</div>
 									</div>
-									<div>
+									<div class="col-md-6">
 										<div class="form-floating mb-3">
 											<input
 												type="text"
@@ -1731,7 +1731,7 @@
 											<label for="phone">Mobile Phone number</label>
 										</div>
 									</div>
-									<div>
+									<div class="col-md-6">
 										<div class="form-floating mb-3">
 											<input
 												type="email"
@@ -1743,6 +1743,32 @@
 											/>
 											<label for="floatingInput">Email address</label>
 										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-floating mb-3">
+											<input
+												type="date"
+												class="form-control"
+												id="dob"
+												name="dob"
+												placeholder="Date of Birth"
+												required
+											/>
+											<label for="dob">Date of Birth</label>
+										</div>
+									</div>
+									<div class="form-floating mb-3 col-md-6">
+										<select
+											class="form-select"
+											id="gender"
+											name="gender"
+											aria-label="Floating label select example"
+											required
+										>
+											<option value="Male" selected>Male</option>
+											<option value="Female">Female</option>
+										</select>
+										<label for="floatingSelect">Gender</label>
 									</div>
 									<div class="form-floating mb-3">
 										<select
@@ -1757,32 +1783,6 @@
 											<option value="Above-6">More than 6 months</option>
 										</select>
 										<label for="floatingSelect">Experience on the Market</label>
-									</div>
-									<div>
-										<div class="form-floating mb-3">
-											<input
-												type="date"
-												class="form-control"
-												id="dob"
-												name="dob"
-												placeholder="Date of Birth"
-												required
-											/>
-											<label for="dob">Date of Birth</label>
-										</div>
-									</div>
-									<div class="form-floating mb-3">
-										<select
-											class="form-select"
-											id="gender"
-											name="gender"
-											aria-label="Floating label select example"
-											required
-										>
-											<option value="Male" selected>Male</option>
-											<option value="Female">Female</option>
-										</select>
-										<label for="floatingSelect">Gender</label>
 									</div>
 									<div>
 										<div class="form-floating mb-3">
@@ -2812,7 +2812,7 @@
 		<script src="assets/js/main.js"></script>
 		<script>
 			function getCourse(courseName) {
-				document.getElementById("modal-header").innerHTML = courseName;
+				document.getElementById("modal-header").innerHTML = courseName + ' Application Form';
 				document.getElementById("course-name").value = courseName;
 			}
 		</script>
