@@ -1007,7 +1007,7 @@
 										<h3>Signals</h3>
 									</a>
 									<p>
-										Everyday the WolfX team shows you the best time to make the
+										Everyday the WCK team shows you the best time to make the
 										right move. Just free daily analysis to help you make better
 										trading movements. Join our telegram group.
 									</p>
