@@ -608,8 +608,8 @@ section {
 }
 
 @media (min-width: 992px) {
-	.hero-animated .animated {
-		max-width: 45%;
+	.animated {
+		max-width: 100%;
 	}
 }
 
