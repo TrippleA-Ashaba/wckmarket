@@ -3,25 +3,31 @@
 // require_once 'vendor/sendgrid/sendgrid/sendgrid-php.php';
 require 'config.php';
 require 'vendor/autoload.php';
+
 use SendGrid\Mail\Mail;
 
 $email = new Mail();
-$fname = $_POST['fname'];
-$lname = $_POST['lname'];
-$phone = $_POST['phone'];
-$experience = $_POST['experience'];
-$location = $_POST['location'];
-$dob = $_POST['dob'];   
-$course = $_POST['course'];
-$reason = $_POST['reason'];
-$emailAddress = $_POST['email'];
-$subject = "New Application";
-$name = $fname.' '.$lname;
-$email->setFrom($emailAddress, "WCK Markets Member");
-$email->setSubject($subject);
-$email->addTo($companyEmail, "WCK Markets Admin");
-$email->addContent(
-    "text/html", "<p>Hello Admin,<br>
+if (
+    !empty($_POST["fname"]) && !empty($_POST["lname"]) && !empty($_POST["phone"]) && !empty($_POST["experience"])
+    && !empty($_POST["location"]) && !empty($_POST["dob"]) && !empty($_POST["course"]) && !empty($_POST["reason"]) && !empty($_POST["email"])
+) {
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $phone = $_POST['phone'];
+    $experience = $_POST['experience'];
+    $location = $_POST['location'];
+    $dob = $_POST['dob'];
+    $course = $_POST['course'];
+    $reason = $_POST['reason'];
+    $emailAddress = $_POST['email'];
+    $subject = "New Application";
+    $name = $fname . ' ' . $lname;
+    $email->setFrom($emailAddress, "WCK Markets Member");
+    $email->setSubject($subject);
+    $email->addTo($companyEmail, "WCK Markets Admin");
+    $email->addContent(
+        "text/html",
+        "<p>Hello Admin,<br>
             Please find my details below,<br>
             Full Name: $name,<br>
             Email: $emailAddress, <br>
@@ -34,10 +40,14 @@ $email->addContent(
             kr,<br>
             $name
     </p>"
-);
-$sendgrid = new \SendGrid($apiKey);
-if($sendgrid->send($email)){
-    header("Location: index.php?message=success");
+    );
+    $sendgrid = new \SendGrid($apiKey);
+    if ($sendgrid->send($email)) {
+        header("Location: index.php?message=success");
+        die();
+    }
+}else{
+    header("Location: index.php?message=danger");
     die();
 }
 // try {

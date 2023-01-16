@@ -50,12 +50,24 @@
 	<body>
 		<!-- ======= Header ======= -->
 		<header id="header" class="header fixed-top" data-scrollto-offset="0">
-			<?php include 'navbar.php';?>
-			<?php if(!empty($_GET['message'])): ?>
-			<div class="alert alert-success" role="alert">
-				Your application was submitted successfully, we'll get back to you shortly
-			</div>
+			<?php 
+				include 'navbar.php';
+				if(!empty($_GET['message'])){
+					$message = $_GET['message'];
+				}
+			?>
+			<?php if(!empty($message) && $message == 'success'): ?>
+				<div class="alert alert-success" role="alert">
+					Your application was submitted successfully, we'll get back to you shortly
+				</div>
 			<?php endif; ?>
+			<?php if(!empty($message) && $message == 'danger'): ?>
+				<div class="alert alert-danger" role="alert">
+					Please make sure all fields have been filled correctly
+				</div>
+			<?php endif; ?>
+
+			
 		</header>
 		<!-- End Header -->
 
